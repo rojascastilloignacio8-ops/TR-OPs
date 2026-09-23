@@ -1,4 +1,21 @@
-.error{
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
+body::selection{
+  background-color: brown;
+  color: aliceblue;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 6px;
+}
+.btn-elimi{
+  background-color: #0B4F6C;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition-duration: 0.3s;
+}
+.btn-elimi:hover{
+  background-color: red;
+  color: white;
 }

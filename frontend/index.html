@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/style.css">
-    <title>Gestión de personas</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/css/estilos.css">
 </head>
+
 <body>
-    <h1>Agregar nueva persona</h1>
-    <form id="formulario">
-        <label for="nombre">Nombre</label></br>
-        <input type="text" id="nombre" placeholder="Escribe un nombre cualquiera"></br>
-        <span id="error-nombre" class="error"></span><br>
-        <label for="edad">Edad</label></br>
-        <input type="number" id="edad" placeholder="Ingrese una edad entre 1 y 99" min="1" max="99"></br>
+    <h2>Traer Productos</h2>
+    <button id="traer-pro">Traer</button>
+    <table> 
+        <thead>
+            <tr>
+                <td><strong>ID</strong></td>
+                <td><strong>Nombre</strong></td>
+                <td><strong>Precio</strong></td>
+                <td><strong>Stock</strong></td>
+                <td><strong>Acciones</strong></td>
+            </tr>
+        </thead>
+        <tbody id="datos">
 
-        <input type="submit" value="Agregar persona" id="env" disabled>
-    </form>
-    <div id="cav">
-
-    </div>
-
+        </tbody>
+    </table>
     <script src="./public/js/main.js"></script>
 </body>
+
 </html>
