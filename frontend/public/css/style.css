@@ -19,3 +19,7 @@ table, th, td {
   background-color: red;
   color: white;
 }
+.errores{
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+}

@@ -1,5 +1,13 @@
 const boton = document.getElementById("traer-pro")
 const tabla_cuerpo = document.getElementById("datos")
+const cont_error = document.getElementById("cont-error")
+function paraErrores(mensaje_error){
+    cont_error.innerText = ""
+    const text_error = document.createElement("h3")
+    text_error.innerText = mensaje_error
+    text_error.classList.add("errores")
+    cont_error.appendChild(text_error)
+}
 async function eliminarProducto(id){
     try{
         const url = `http://localhost:8000/productos/${id}`
@@ -21,6 +29,7 @@ async function construirProductos() {
         if (!respuesta.ok){
             throw new Error(`Response status: ${respuesta.status}`)
         }
+        cont_error.innerText = ""
         const resusltado = await respuesta.json()
         if (resusltado.length > 0){
             tabla_cuerpo.innerText = ""
@@ -51,6 +60,7 @@ async function construirProductos() {
         console.log(resusltado)
     } catch (error){
         console.error(error)
+        paraErrores(error)
     }
 }
 boton.addEventListener("click", async (event)=> {
